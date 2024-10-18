@@ -1,0 +1,38 @@
+body{
+    background-image: url(imgs/wall.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .product{
+    /*background-color: red;
+    */width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0;
+}
+
+.banner .product .soda{
+    background: url(imgs/cover1.jpeg) var(--left) 5px ,                url(imgs/soda.png);
+    background-size: auto 100%;
+    width: 180px;
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(imgs/soda.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+}
+
+.product:hover{
+    --left: -1000px;
+}
